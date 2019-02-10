@@ -32,12 +32,8 @@ article, section {
 .navbar {
   background-image: linear-gradient(to right, #076e70 , #a2ddef);
   border-bottom: 3px solid #fcd876;
-  position: -webkit-sticky;
-  /*position: sticky;*/
   padding: 10px;
-  /*top: 0;*/
   left: 0;
-  /*background: #4AD1CB;*/
   width: 100%;
   z-index: 2;
   margin-bottom: 20px;
@@ -72,6 +68,7 @@ h1 {
 }
 
 h2 {
+  margin-bottom: 20px;
   font-size: 30px;
   border-bottom: 2px solid black;
   display:inline-block ;
@@ -83,54 +80,63 @@ p {
   text-align: justify;
 }
 
+label {
+  margin-bottom: 0;
+}
+
+
 /* Image modifications */
 img {
   width: 100%;
 }
 
 #succulent{
+  background-image: url("../images/plant.jpg");
+  background-size: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   height: 70vh;
   width: 100%;
-}
-
-#succulent img{
-  max-height: 100%;
-  border: none;
 }
 
 .carousel-item img {
   max-height: 800px;
 }
 
+/* Gallery */
+
 .gallery-image {
   position: relative;
 }
 
-.gallery-image button {
-  outline: none;
+.gallery-button {
   display: none;
+  color: white;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  background-color: #a2c0ef;
+  background-color: #076e70;
   border: none;
+}
+
+.gallery-button:hover {
+  outline: none;
+  background-color: #089da0;
 }
 
 .modal-dialog {
   max-width: 800px;
 }
 
-/*#gallery img:hover {
-  opacity: .5;
-}*/
+/*  Testimonials  */
 
 #testimonials {
   background-image: url("../images/succulent-bg.png");
+  background-attachment: fixed;
   background-size: cover;
   height: 500px;
-  position: relative;
   margin: 0;
   width: 100%;
   color: black;
@@ -140,7 +146,18 @@ img {
   display: none;
 }
 
+/* Styles on form elements */
 
+.btn-primary {
+  background-color: #fcd876;
+  color: black;
+  outline: none;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #ffeab2;
+}
 
 /* Footer styling */
 footer {
@@ -156,6 +173,10 @@ footer {
 
 /* Media Queries */
 @media (max-width: 768px) {
+  #succulent{
+    height: 40vh;
+    background-size: contain;
+  }
 
   .navbar {
     justify-content: flex-start;
@@ -165,20 +186,12 @@ footer {
     display: none;
   }
 
-  .dropdown-toggle {
-    /*position: absolute;*/
-  }
-
   #hamburger {
     display: block;
     position: relative;
-    /*color: #fff;*/
-    /*font-size: 1.7rem;*/
-    /*left: 55px;*/
-    /*position: absolute;*/
   }
 
   .gallery-image img {
-
+    margin-bottom: 15px;
   }
 }

@@ -21,6 +21,7 @@ showNextQuote();
 
 })();
 
+// Changes the opacity of the gallery images when the cursor enters and leaves. Also reveals a button
 $(".gallery-image").mouseenter(function() {
   $(this).css("opacity", .5);
   $(this).find("button").show();
@@ -31,7 +32,17 @@ $(".gallery-image").mouseleave(function() {
   $(this).find("button").hide();
 })
 
+// Changes the image in the modal based on which button is clicked. From Bootstrap documentation
+$('#exampleModalCenter').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget) // Button that triggered the modal
+  var recipient = button.data('whatever') // Extract info from data-* attributes
+  var modal = $(this)
+  modal.find('.modal-body').empty();
+  modal.find('.modal-body').append(`<img src="${recipient}">`)
+})
 
+
+// Clears the entries of the forms when submit is clicked
 document.querySelector(".submit").addEventListener('click', clearForm)
 
 function clearForm(e) {
@@ -40,15 +51,5 @@ function clearForm(e) {
 }
 
 
-$('#exampleModalCenter').on('show.bs.modal', function (event) {
-  var button = $(event.relatedTarget) // Button that triggered the modal
-  // debugger;
-  var recipient = button.data('whatever') // Extract info from data-* attributes
-  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-  var modal = $(this)
-  modal.find('.modal-body').empty();
-  modal.find('.modal-body').append(`<img src="${recipient}">`)
-  // modal.find('.modal-body input').val(recipient)
-})
+
 
