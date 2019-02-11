@@ -9,6 +9,7 @@ body {
   margin: 0 auto;
   text-align: center;
   background-size: cover;
+  position: relative;
 }
 
 main {
@@ -58,6 +59,10 @@ a:hover {
 
 #hamburger {
   display: none;
+}
+
+.nav-pills .nav-link.active {
+  background-color: none;
 }
 
 /* Content/text styles */
