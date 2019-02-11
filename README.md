@@ -19,8 +19,8 @@ A feature I am excited about is getting a button to appear and disappear to open
 I would like to find a way to better implement the heading image. The image is not fully responsive at every ratio and it would be nice to display it better. I would also like to find a way to implement a carousel in the modal.
 
 Some other features that would be cool are:
--adding real links to the social links
--linking to actual projects in the carousel
--adding a skills section
+- adding real links to the social links
+- linking to actual projects in the carousel
+- adding a skills section
 
 
