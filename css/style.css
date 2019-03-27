@@ -1,4 +1,4 @@
-/* Styles for main document items */
+/*/////// Styles for main document items ////////*/
 html {
   scroll-behavior: smooth;
 }
@@ -16,7 +16,7 @@ main {
   position: relative;
 }
 
-/*Styles for page blocks */
+/*/////// Styles for page blocks /////////*/
 header {
   margin-bottom: 60px;
 }
@@ -29,7 +29,7 @@ article, section {
   background-color: #a2ddef;
 }
 
-/* Navigation bar styling */
+/*********** Navigation bar styling ***********/
 .navbar {
   background-image: linear-gradient(to right, #076e70 , #a2ddef);
   border-bottom: 3px solid #fcd876;
@@ -61,11 +61,28 @@ a:hover {
   display: none;
 }
 
-.nav-pills .nav-link.active {
-  background-color: #fcd876;
+.nav-pills .nav-link{
+  border-radius: 0
 }
 
-/* Content/text styles */
+.nav-pills .nav-link.active {
+  color: #fcd876;
+  background-color: transparent;
+  border-bottom: 2px solid #fcd876;
+  border-radius: 0
+}
+
+/************** Header **************/
+
+#succulent{
+  background-image: url("../images/plant-lg.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 80vh;
+  width: 100%;
+}
+
 h1 {
   font-size: 60px;
   text-transform: uppercase;
@@ -90,19 +107,12 @@ label {
 }
 
 
-/* Image modifications */
+/************* Image modifications *************/
 img {
   width: 100%;
 }
 
-#succulent{
-  background-image: url("../images/plant-lg.png");
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  height: 80vh;
-  width: 100%;
-}
+
 
 /*#succulent img {
   width: 100%;
@@ -113,7 +123,16 @@ img {
   max-height: 800px;
 }
 
-/* Gallery */
+#projects-button {
+  margin-top: 20px
+}
+
+#projects-button:hover{
+  transition: none;
+  color:black;
+}
+
+/*********** Gallery ***************/
 
 .gallery-image {
   position: relative;
@@ -136,11 +155,9 @@ img {
   background-color: #089da0;
 }
 
-.modal-dialog {
-  max-width: 768px;
-}
 
-/*  Testimonials  */
+
+/************  Testimonials  **************/
 
 #testimonials {
   background-image: url("../images/succulent-bg.png");
@@ -156,7 +173,7 @@ img {
   display: none;
 }
 
-/* Styles on form elements */
+/*********** Styles on form elements **********/
 
 .btn-primary {
   background-color: #fcd876;
@@ -169,7 +186,7 @@ img {
   background-color: #ffeab2;
 }
 
-/* Footer styling */
+/************* Footer styling **************/
 footer {
   background-image: linear-gradient(to left, #076e70 , #a2ddef);
   border-top: 3px solid #fcd876;
@@ -217,3 +234,4 @@ footer {
     height: 30vh;
     background-size: contain;
   }
+}
