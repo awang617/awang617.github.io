@@ -1,3 +1,15 @@
 .full-window {
     height: 74vh;
 }
+
+p {
+    text-align: center;
+}
+
+.project-link{
+  color: #076e70;
+}
+
+.project-link:hover {
+    color:#a2ddef;
+}

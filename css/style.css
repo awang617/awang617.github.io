@@ -68,7 +68,7 @@ article, section {
 .nav-pills .nav-link.active {
   color: #fcd876;
   background-color: transparent;
-  /* border-bottom: 2px solid #fcd876; */
+  border-bottom: 2px solid #fcd876;
   border-radius: 0
 }
 
