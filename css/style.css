@@ -1,4 +1,6 @@
-/*/////// Styles for main document items ////////*/
+/**************************************************/
+/********** Styles for main document items ********/
+/**************************************************/
 html {
   scroll-behavior: smooth;
 }
@@ -16,7 +18,9 @@ main {
   position: relative;
 }
 
-/*/////// Styles for page blocks /////////*/
+/******************************************/
+/********* Styles for page blocks *********/
+/******************************************/
 header {
   margin-bottom: 60px;
 }
@@ -29,10 +33,12 @@ article, section {
   background-color: #a2ddef;
 }
 
+/**********************************************/
 /*********** Navigation bar styling ***********/
+/**********************************************/
 .navbar {
   background-image: linear-gradient(to right, #076e70 , #a2ddef);
-  border-bottom: 3px solid #fcd876;
+  /* border-bottom: 3px solid #fcd876; */
   padding: 10px;
   left: 0;
   width: 100%;
@@ -45,13 +51,14 @@ article, section {
   font-size: 30px
 }
 
-.navbar-dark .navbar-nav .nav-link, a {
+
+.navbar-dark .navbar-nav .nav-link, a.nav-link, i {
   color: white;
   padding-bottom: 0;
   transition: color 2s;
 }
 
-.navbar-dark .navbar-nav .nav-link:hover, a:hover {
+a.nav-link:hover, i:hover {
   color: #fcd876;
   /*background: gray;*/
   transition: all 2s;
@@ -72,8 +79,9 @@ article, section {
   border-radius: 0
 }
 
+/************************************/
 /************** Header **************/
-
+/************************************/
 #succulent{
   background-image: url("../images/plant-lg.png");
   background-size: cover;
@@ -106,18 +114,25 @@ label {
   margin-bottom: 0;
 }
 
-
-/************* Image modifications *************/
-img {
-  width: 100%;
+/***********************************************/
+/****************** Projects *******************/
+/***********************************************/
+.project-container {
+  margin-top: 50px;
 }
 
+.regular-link {
+  color: #076e70;
+}
 
+.regular-link:hover {
+  color:#089da0;
+  transition: all 2s;
+}
 
-/*#succulent img {
-  width: 100%;
-  height: 100%;
-}*/
+img {
+  max-width: 100%;
+}
 
 .carousel-item img {
   max-height: 800px;
@@ -132,10 +147,12 @@ img {
   color:black;
 }
 
+/***********************************/
 /*********** Gallery ***************/
-
+/***********************************/
 .gallery-image {
   position: relative;
+  margin-top: 30px;
 }
 
 .gallery-button {
@@ -155,25 +172,28 @@ img {
   background-color: #089da0;
 }
 
-
-
-/************  Testimonials  **************/
-
-#testimonials {
-  background-image: url("../images/succulent-bg.png");
-  background-attachment: fixed;
-  background-size: cover;
-  height: 500px;
-  margin: 0;
-  width: 100%;
-  color: black;
+.modal-content{
+  border-radius: 0;
 }
 
-.quote {
-  display: none;
+.modal-footer{
+  border: none;
 }
 
-/*********** Styles on form elements **********/
+
+/******************************************/
+/************  Skills  **************/
+/******************************************/
+
+.skill-icon {
+  width: 10%;
+  height: auto;
+  margin: 15px;
+}
+
+/************************************************/
+/*********** Styles on button elements **********/
+/************************************************/
 
 .btn-primary {
   background-color: #fcd876;
@@ -184,12 +204,19 @@ img {
 
 .btn-primary:hover {
   background-color: #ffeab2;
+  color: black;
 }
 
+#contact-me {
+  margin-bottom: 5rem;
+}
+
+/*******************************************/
 /************* Footer styling **************/
+/*******************************************/
 footer {
   background-image: linear-gradient(to left, #076e70 , #a2ddef);
-  border-top: 3px solid #fcd876;
+  /* border-top: 3px solid #fcd876; */
   padding: 10px;
 }
 
@@ -198,13 +225,25 @@ footer {
   padding: 0 10px;
 }
 
-/* Media Queries */
+/***************************************/
+/*********** Media Queries *************/
+/***************************************/
+@media (max-width: 992px){
+  .nav-link.active{
+    display: inline-block;
+  }
+}
+
 @media (max-width: 970px) {
   #succulent{
     height: 70vh;
     background-size: contain;
   }
+  .skill-icon{
+    width: 15%;
+  }
 }
+
 
 @media (max-width: 768px) {
   #succulent{
@@ -212,12 +251,8 @@ footer {
     background-size: contain;
   }
 
-  .navbar {
-    justify-content: flex-start;
-  }
-
   .nav-item {
-    display: none;
+    /* display: none; */
   }
 
   #hamburger {
@@ -227,6 +262,15 @@ footer {
 
   .gallery-image img {
     margin-bottom: 15px;
+  }
+}
+
+@media (max-width:576px) {
+  p, .btn-primary, .btn-secondary, .gallery-button{
+    font-size: 12px;
+  }
+  .project-container img {
+    margin-bottom: 20px;
   }
 }
 
